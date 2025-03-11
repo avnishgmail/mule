@@ -5,17 +5,18 @@
   "organizationId": "d9e83eb2-a64a-4c64-9450-cf0f3ee01371",
   "descriptorVersion": "1.0.0",
   "tags": [],
+  "dependencies": [
+    {
+      "scope": "design",
+      "classifier": "raml-fragment",
+      "packaging": "zip",
+      "groupId": "d9e83eb2-a64a-4c64-9450-cf0f3ee01371",
+      "assetId": "account-data-type",
+      "version": "1.0.0"
+    }
+  ],
   "groupId": "d9e83eb2-a64a-4c64-9450-cf0f3ee01371",
   "assetId": "sbi-bank-restful-api",
   "version": "1.0.0",
-  "dependencies": [
-    {
-      "groupId": "d9e83eb2-a64a-4c64-9450-cf0f3ee01371",
-      "assetId": "account-data-type",
-      "version": "1.0.0",
-      "scope": "design",
-      "classifier": "raml-fragment",
-      "packaging": "zip"
-    }
-  ]
+  "apiVersion": "v1"
 }
