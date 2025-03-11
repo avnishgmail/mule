@@ -1,0 +1,69 @@
+#%RAML 1.0
+title: SBI Bank Restful API
+
+version: v1
+mediaType: 
+    - application/json
+    - application/xml
+protocols:
+    - HTTP
+    - HTTPS
+
+types:
+    Account: !include exchange_modules/d9e83eb2-a64a-4c64-9450-cf0f3ee01371/account-data-type/1.0.0/account-data-type.raml
+uses:
+    Customer: DataTypes/CustomerDataType.raml
+
+
+/accounts:
+    get:
+        queryParameters:
+            accountType:
+                enum:
+                    - Saving
+                    - Personal
+                    - Current
+        responses:
+            200:
+                body:
+                    application/json:
+                        example: !include Examples/Accounts.json
+
+    post:
+        body:
+                application/json:
+                    type: Account[]
+                    example: !include Examples/Accounts.json
+        responses:
+            201:
+                body:
+                    application/json:
+                        example: "Accounts Created"
+
+
+
+
+/customers:
+    get:
+        queryParameters:
+            city:
+                type: string
+        responses:
+            200:
+                body:
+                    application/json:
+                        example : !include Examples/Customers.json
+
+
+
+    post:
+        body:
+            application/json:
+                type: Customer.customerType
+                example: !include Examples/Customers.json
+        responses:
+            201:
+                body:
+                    application/json:
+                        example: 
+                            message: "Customer Created Successfully"

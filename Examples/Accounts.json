@@ -1,0 +1,20 @@
+[{
+
+    "AccountId": "1",
+    "Status": "Enabled",
+    "StatusUpdateDateTime" : "2019-01-01T06:06:06+00:00",
+    "Currency" : "INR",
+    "AccountType" : "Personal",
+    "AccountSubType" : "CurrentAccount",
+    "Nickname" : "Household"
+},
+{
+
+    "AccountId": "2",
+    "Status": "Enabled",
+    "StatusUpdateDateTime" : "2012-01-01T06:06:06+00:00",
+    "Currency" : "GBP",
+    "AccountType" : "Personal",
+    "AccountSubType" : "CurrentAccount",
+    "Nickname" : "Bills"
+}]

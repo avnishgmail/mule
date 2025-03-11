@@ -1,0 +1,21 @@
+{
+    "firstname" : "John",
+    "lastname" : "Smith",
+    "age"   :   25,
+    "address" : 
+    {
+        "street" : "3105 Sector 38D",
+        "city" : "New York"
+    },
+    "phone" :
+    [
+        {
+            "phoneType" : "Mobile",
+            "phoneNumber" : "9815613105"
+        },
+        {
+            "phoneType" : "Phone",
+            "phoneNumber" : "8196000454"
+        }
+    ]
+}
