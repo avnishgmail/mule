@@ -15,8 +15,12 @@ uses:
     Customer: DataTypes/CustomerDataType.raml
 traits:
     errorRes: !include Traits/errorResponses.raml
+securitySchemes:
+    customSec: !include SecuritySchemes/CustomSecurityScheme.raml
 
 
+securedBy:
+    - customSec
 /accounts:
     is:
         - errorRes
@@ -48,7 +52,7 @@ traits:
 
 
 /customers:
-    is
+    is:
         - errorRes
     get:
         queryParameters:
