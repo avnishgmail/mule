@@ -13,9 +13,13 @@ types:
     Account: !include exchange_modules/d9e83eb2-a64a-4c64-9450-cf0f3ee01371/account-data-type/1.0.0/account-data-type.raml
 uses:
     Customer: DataTypes/CustomerDataType.raml
+traits:
+    errorRes: !include Traits/errorResponses.raml
 
 
 /accounts:
+    is:
+        - errorRes
     get:
         queryParameters:
             accountType:
@@ -44,6 +48,8 @@ uses:
 
 
 /customers:
+    is
+        - errorRes
     get:
         queryParameters:
             city:
